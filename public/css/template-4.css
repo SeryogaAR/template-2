@@ -147,7 +147,7 @@
   font-size: var(--size-d);
   text-decoration: none;
   padding: var(--space-m) var(--space-xm);
-  border-radius: var(--border-radius-lgit);
+  border-radius: var(--border-radius-l);
 }
 
 .button:hover {
