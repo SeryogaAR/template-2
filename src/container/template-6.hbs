@@ -1,0 +1,52 @@
+<header class="header">
+
+    <div class="">
+        {{> logo}}
+    </div>
+
+    <nav class="header_nav">
+        <div class="header_nav_right">
+            {{> nav list=header}}
+        </div>
+    </nav>
+</header>
+
+<main class="main">
+
+    <div class="info">
+        {{#with info}}
+        <h1 class="info_title">{{title}}</h1>
+        <p class="info_description">{{description}}</p>
+        {{/with}}
+    </div>
+
+
+
+    <form class="form">
+        {{#with form}}
+        <div class="inputs">
+            {{#each inputs}}
+            <input type="{{type}}" placeholder="{{placeholder}}" id="{{id}}" class="form_inputs" name="{{name}}">
+
+            {{/each}}
+        </div>
+
+        {{/with}}
+    </form>
+
+</main>
+
+<footer class="footer">
+
+    <div>
+        {{> logo}}
+        <span class="footer_copyright"> Copyright 2023-2024</span>
+    </div>
+    {{#each footer}}
+    <div>
+        <span class="footer_title"> {{title}} </span>
+        {{> nav list=links isVertical=true}}
+    </div>
+    {{/each}}
+
+</footer>
