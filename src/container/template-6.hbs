@@ -12,27 +12,28 @@
 </header>
 
 <main class="main">
-    {{#with info}}
-    <div class="info">
 
+    <div class="info">
+        {{#with info}}
         <h1 class="info_title">{{title}}</h1>
         <p class="info_description">{{description}}</p>
-
+        {{/with}}
     </div>
-    {{/with}}
 
-    {{#with form}}
+
+
     <form class="form">
+        {{#with form}}
         <div class="inputs">
             {{#each inputs}}
-            <input type="{{type}}" placeholder="{{placeholder}}" id="{{id}}" class="form_input" name="{{name}}">
+            <input type="{{type}}" placeholder="{{placeholder}}" id="{{id}}" class="form_inputs" name="{{name}}">
 
             {{/each}}
         </div>
 
-
+        {{/with}}
     </form>
-    {{/with}}
+
 </main>
 
 <footer class="footer">
