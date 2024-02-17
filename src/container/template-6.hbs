@@ -11,30 +11,97 @@
     </nav>
 </header>
 
-<main class="main">
 
+
+<main class="main">
+    {{#with info}}
     <div class="info">
-        {{#with info}}
+
         <h1 class="info_title">{{title}}</h1>
         <p class="info_description">{{description}}</p>
-        {{/with}}
+
     </div>
+    {{/with}}
 
 
+    {{#with form}}
 
     <form class="form">
-        {{#with form}}
+
         <div class="inputs">
             {{#each inputs}}
             <input type="{{type}}" placeholder="{{placeholder}}" id="{{id}}" class="form_inputs" name="{{name}}">
 
             {{/each}}
         </div>
+        <div class="form_checkbox">
+            {{#with checkbox}}
+            <input type="checkbox" name="{{name}}">
+            <label>{{label}}</label>
+            {{/with}}
+        </div>
 
-        {{/with}}
+        <button class="form_button">{{button}}</button>
+        <div class="form_border"></div>
+        <p class="form_info">{{info}}</p>
+
     </form>
-
+    {{/with}}
 </main>
+
+
+{{#with updates}}
+<div class="updates">
+    <h6 class="updates_title">{{title}}</h6>
+
+
+    {{#each list}}
+    <div class="updates_list">
+        <div class="updates_row">
+            <image src="#" class="updates_image"></image>
+            <div>
+                <p class="updates_nickname">@{{nickname}}</p>
+                <p class="updates_description">{{description}}</p>
+            </div>
+        </div>
+    </div>
+    {{/each}}
+
+
+    <a href="{{show_all.url}}" class="updates_show_all">{{show_all.text}}</a>
+
+
+
+</div>
+{{/with}}
+
+
+{{#with expirience}}
+
+<div class="expirience">
+
+    <div class="expirience_column">
+
+        <div class="badge">
+            <div class="expirience_badge">{{badge}}</div>
+        </div>
+        <h2 class="expirience_title">{{title}}</h2>
+    </div>
+
+    <div class="expirience_row">
+        {{#each list}}
+        <div>
+            <h6 class="expirience_name">{{name}}</h6>
+            <p class="expirience_details">{{details}}</p>
+        </div>
+        {{/each}}
+    </div>
+</div>
+{{/with}}
+
+
+
+
 
 <footer class="footer">
 
