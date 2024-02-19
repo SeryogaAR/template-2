@@ -1,0 +1,13 @@
+{{#each data}}
+<div class="articles_card_1">
+
+    <div class="articles_image">
+        <image class="articles_photo" src="{{photo}}"></image>
+
+        {{#if isNew}} <span>NEW</span> {{/if}}
+    </div>
+    <h4 class="articles_title">{{name}}</h4>
+    <p class="articles_text">{{description}}</p>
+    <a href="#" class="articles_button">Read All</a>
+</div>
+{{/each}}
